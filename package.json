@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "compile:js": "browserify public/js/app.js -o public/js/bundled/app.js"
   },
   "keywords": [],
   "author": "",
