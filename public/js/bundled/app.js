@@ -37,9 +37,10 @@ window.onload = function(){
                 const latitude = position.coords.latitude;
                 const longitude = position.coords.longitude;
                 // fetching the place name with the help of lat and long
-                fetch('http://api.weatherstack.com/current?access_key=2290bead9c3472032b4fad5ee8c10bba&query='+latitude+','+longitude).then((response) => {
+                //console.log(latitude,longitude);
+                fetch('https://api.bigdatacloud.net/data/reverse-geocode-client?latitude='+latitude+'&longitude='+longitude+'&localityLanguage=en').then((response) => {
                     response.json().then((data) => {
-                        var location = data.location.name;
+                        var location = data.locality+','+data.principalSubdivision;
                         messageOne.textContent = 'Loading...';
                         messageTwo.textContent = '';
                         // setting the cookie
