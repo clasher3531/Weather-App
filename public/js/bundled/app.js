@@ -8,7 +8,7 @@ const messageOne = document.querySelector('#message-1');
 const messageTwo = document.querySelector('#message-2');
 
 // creating the const for cookie expiry time in mins;
-const cookieExpiry = 1;
+const cookieExpiry = 30;
 
 // method gives information about the forecast when location is provided
 function getInfo(location){
