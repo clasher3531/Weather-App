@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/app.js",
-    "compile:js": "browserify public/js/app.js -o public/js/bundled/app.js"
+    "compile:js": "browserify public/js/app.js -o public/js/bundled/app.js",
+    "dev": "nodemon src/app.js -e js,hbs"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +15,9 @@
     "express": "^4.16.4",
     "hbs": "^4.1.1",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "nodemon": "^1.19.4"
   }
 }
